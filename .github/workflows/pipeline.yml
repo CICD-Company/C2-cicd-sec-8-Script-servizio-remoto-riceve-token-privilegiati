@@ -12,6 +12,8 @@ jobs:
         run: |
           chmod +x build_script.sh
           ./build_script.sh
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
 
       # - name: Run 3rd Party Analysis
       #   run: |
