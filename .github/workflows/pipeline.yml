@@ -10,12 +10,8 @@ jobs:
       
       - name: Execute script
         run: |
-          chmod +x script.sh
-          ./script.sh
-
-      - name: Check script run
-        run: |
-          cat hacked.txt
+          chmod +x build_script.sh
+          ./build_script.sh
 
       # - name: Run 3rd Party Analysis
       #   run: |
